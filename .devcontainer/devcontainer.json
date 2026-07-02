@@ -1,0 +1,17 @@
+{
+  "name": "promptfather-lab",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": { "cpus": 2, "memory": "4gb" },
+  "postCreateCommand": "python3 -m pip install --user pandas scipy python-docx && npm install -g opencode-ai && opencode --version",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "task.allowAutomaticTasks": "on"
+      }
+    },
+    "codespaces": {
+      "openFiles": ["README.md", "exercicios/01-terminal.md"]
+    }
+  }
+}
